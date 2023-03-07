@@ -2,13 +2,10 @@ import random
 def fx():
 	for i in range(5):
 		a=random.randrange(10,1000,1)
-		divisores=[]
+		suma=0
 		for b in range(1,a):
 			if a%b==0:
-				divisores.append(b)
-		suma=0
-		for c in divisores:
-			suma=suma+c
+				suma+=b
 		if a<suma:
 			print(f'El numero {a} es abundante')
 		else:
